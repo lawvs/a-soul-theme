@@ -1,4 +1,12 @@
 import { parseToRgb, rgb } from "polished";
+import { existsSync, mkdirSync } from "fs";
+import type { PathLike } from "fs";
+
+export const prepareDir = (dir: PathLike) => {
+  if (!existsSync(dir)) {
+    mkdirSync(dir, { recursive: true });
+  }
+};
 
 /**
  * Format color string to hex color format

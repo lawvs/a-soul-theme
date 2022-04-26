@@ -4,7 +4,7 @@ import { transparentize } from "polished";
 import { IColorSet } from "vscode-theme-generator";
 import { VscodeThemeGenerator } from "vscode-theme-generator/dist/vscodeThemeGenerator";
 import { DianaColor } from "./config";
-import { toHexColorString } from "./utils";
+import { prepareDir, toHexColorString } from "./utils";
 
 const OUTPUT_DIR = path.join(process.cwd(), "themes");
 
@@ -96,6 +96,8 @@ const dianaDark = async () => {
 };
 
 const main = async () => {
+  await prepareDir(OUTPUT_DIR);
+
   const packageJson = JSON.parse(
     await readFile(path.join(process.cwd(), "package.json"), {
       encoding: "utf8",

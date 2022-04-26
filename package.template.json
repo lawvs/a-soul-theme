@@ -1,0 +1,45 @@
+{
+  "name": "a-soul-theme",
+  "displayName": "a soul theme",
+  "version": "0.0.1",
+  "description": "a soul theme",
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "a-soul",
+    "dark",
+    "theme",
+    "color-theme"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lawvs/a-soul-theme.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "ts-node ./src/index.ts",
+    "clean": "rm -rf themes a-soul.vsix",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "package": "vsce package -o ./a-soul.vsix --no-dependencies"
+  },
+  "contributes": {
+    "themes": []
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.25",
+    "generator-code": "^1.6.9",
+    "polished": "^4.2.2",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3",
+    "vsce": "^2.7.0",
+    "vscode-theme-generator": "^0.2.1",
+    "yo": "^4.3.0"
+  },
+  "engines": {
+    "vscode": "^1.13.0"
+  },
+  "icon": "icon.png"
+}

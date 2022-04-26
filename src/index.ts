@@ -97,7 +97,7 @@ const dianaDark = async () => {
 
 const main = async () => {
   const packageJson = JSON.parse(
-    await readFile(path.join(process.cwd(), "package.template.json"), {
+    await readFile(path.join(process.cwd(), "package.json"), {
       encoding: "utf8",
     })
   );

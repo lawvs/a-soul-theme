@@ -1,5 +1,7 @@
 # A-SOUL Theme
 
+[![Build](https://github.com/lawvs/a-soul-theme/actions/workflows/build.yml/badge.svg)](https://github.com/lawvs/a-soul-theme/actions/workflows/build.yml)
+
 ![image](https://user-images.githubusercontent.com/18554747/165396514-cca8483e-fcd2-43d8-8c06-4e922ec4623c.png)
 
 ## Install

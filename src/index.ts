@@ -3,7 +3,7 @@ import * as path from "path";
 import { transparentize } from "polished";
 import { IColorSet } from "vscode-theme-generator";
 import { VscodeThemeGenerator } from "vscode-theme-generator/dist/vscodeThemeGenerator";
-import { DianaColor } from "./config";
+import { AvaColor, DianaColor } from "./config";
 import { prepareDir, toHexColorString } from "./utils";
 
 const OUTPUT_DIR = path.join(process.cwd(), "themes");
@@ -45,6 +45,81 @@ const genTheme = async ({
     uiTheme: type === "dark" ? "vs-dark" : "vs",
     path: file,
   } as const;
+};
+
+const avaDark = async () => {
+  const theme = {
+    label: "Ava Dark",
+    type: "dark",
+  } as const;
+
+  /**
+   * The background color is ported from [Dracula Theme](https://github.com/dracula/dracula-theme)
+   *
+   * Licensed under MIT.
+   */
+  const Background = "#282a36";
+
+  /**
+   * - color1 determines boolean, identifier, keyword, storage, and cssClass
+   * - color2 determines string, stringEscape, and cssId
+   * - color3 determines function, class, classMember, type, and cssTag
+   * - color4 determines functionCall and number
+   */
+  const colorSet: IColorSet = {
+    type: theme.type,
+    base: {
+      background: Background,
+      foreground: AvaColor.应援色,
+      color1: AvaColor.头发,
+      color2: AvaColor.裙子,
+      color3: AvaColor.裙子,
+      color4: AvaColor.领结,
+    },
+
+    ui: {
+      cursor: AvaColor.应援色,
+      selection: toHexColorString(transparentize(0.8, AvaColor.应援色)), //"#faeb9788",
+    },
+    overrides: {
+      "statusBar.background": AvaColor.鞋子,
+      "statusBar.debuggingBackground": AvaColor.领结,
+    },
+  };
+
+  // Override token colors
+  const tokenColors = [
+    {
+      name: "object key",
+      scope: "meta.object-literal.key",
+      settings: {
+        foreground: AvaColor.发梢,
+      },
+    },
+    {
+      name: "variable property",
+      scope: "variable.other.property",
+      settings: {
+        foreground: AvaColor.头发暗部,
+      },
+    },
+    {
+      name: "type primitive",
+      scope: "	support.type.primitive",
+      settings: {
+        foreground: AvaColor.头饰飘带,
+      },
+    },
+  ] as const;
+
+  return genTheme({
+    label: theme.label,
+    type: theme.type,
+    colorSet: {
+      ...colorSet,
+      tokenColors,
+    },
+  });
 };
 
 const dianaDark = async () => {
@@ -135,7 +210,10 @@ const main = async () => {
     })
   );
 
-  const themes: ContributesTheme[] = [await dianaDark()];
+  const themes: ContributesTheme[] = await Promise.all([
+    avaDark(),
+    dianaDark(),
+  ]);
 
   packageJson.contributes.themes = themes;
 

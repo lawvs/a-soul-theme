@@ -8,12 +8,49 @@ import { prepareDir, toHexColorString } from "./utils";
 
 const OUTPUT_DIR = path.join(process.cwd(), "themes");
 
+const genTheme = async ({
+  label,
+  type,
+  colorSet,
+}: {
+  label: string;
+  type: "light" | "dark";
+  colorSet: IColorSet & {
+    tokenColors?: readonly {
+      name: string;
+      scope: string;
+      settings: Record<string, string>;
+    }[];
+  };
+}) => {
+  const name = label.toLowerCase().split(" ").join("-");
+  const file = path.relative(
+    process.cwd(),
+    path.join(OUTPUT_DIR, `${name}-color-theme.json`)
+  );
+  // generateTheme(theme.name, colorSet, path.join(OUTPUT_DIR, theme.file));
+  const themeString = new VscodeThemeGenerator().generateTheme(name, colorSet);
+
+  const themeJson = JSON.parse(themeString);
+  if (colorSet.tokenColors) {
+    themeJson.tokenColors.push(...colorSet.tokenColors);
+  }
+
+  await writeFile(file, JSON.stringify(themeJson, null, 2), {
+    encoding: "utf8",
+  });
+
+  return {
+    label,
+    uiTheme: type === "dark" ? "vs-dark" : "vs",
+    path: file,
+  } as const;
+};
+
 const dianaDark = async () => {
   const theme = {
-    file: "diana-dark-color-theme.json",
-    name: "diana-dark",
     label: "Diana Dark",
-    type: "dark" as "dark" | "light",
+    type: "dark",
   } as const;
 
   /**
@@ -73,26 +110,20 @@ const dianaDark = async () => {
     },
   ] as const;
 
-  // generateTheme(theme.name, colorSet, path.join(OUTPUT_DIR, theme.file));
-  const themeString = new VscodeThemeGenerator().generateTheme(
-    theme.name,
-    colorSet
-  );
-
-  const themeJson = JSON.parse(themeString);
-  themeJson.tokenColors.push(...tokenColors);
-
-  await writeFile(
-    path.join(OUTPUT_DIR, theme.file),
-    JSON.stringify(themeJson, null, 2),
-    { encoding: "utf8" }
-  );
-
-  return {
+  return genTheme({
     label: theme.label,
-    uiTheme: theme.type === "dark" ? "vs-dark" : "vs",
-    path: path.relative(process.cwd(), path.join(OUTPUT_DIR, theme.file)),
-  } as const;
+    type: theme.type,
+    colorSet: {
+      ...colorSet,
+      tokenColors,
+    },
+  });
+};
+
+type ContributesTheme = {
+  label: string;
+  uiTheme: "vs-dark" | "vs";
+  path: string;
 };
 
 const main = async () => {
@@ -104,13 +135,13 @@ const main = async () => {
     })
   );
 
-  const themes = [await dianaDark()];
+  const themes: ContributesTheme[] = [await dianaDark()];
 
   packageJson.contributes.themes = themes;
 
   await writeFile(
     path.join(process.cwd(), "package.json"),
-    JSON.stringify(packageJson, null, 2)
+    JSON.stringify(packageJson, null, 2) + "\n"
   );
 };
 

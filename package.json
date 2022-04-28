@@ -23,10 +23,15 @@
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
     "package": "vsce package -o ./a-soul.vsix --no-dependencies",
     "start": "pnpm run build && pnpm run package",
-    "typeCheck": "tsc ./src/*.ts --noEmit"
+    "typeCheck": "tsc ./src/*.ts --noEmit --strict"
   },
   "contributes": {
     "themes": [
+      {
+        "label": "Bella Dark",
+        "uiTheme": "vs-dark",
+        "path": "themes/bella-dark-color-theme.json"
+      },
       {
         "label": "Ava Dark",
         "uiTheme": "vs-dark",

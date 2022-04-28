@@ -1,4 +1,4 @@
-import path from "node:path";
+import * as path from "node:path";
 
 export const OUTPUT_DIR = path.join(process.cwd(), "themes");
 
@@ -41,6 +41,42 @@ export const AvaColor = {
   /** 深紫色 */
   鞋子: "#302d62",
 } as const;
+
+export const BellaColor = {
+  /** 红色 */
+  应援色: "#db7d74",
+
+  /** 靛蓝色 */
+  头发: "#56537b",
+  /** 靛蓝色 */
+  头发亮部: "#6f6b98",
+  /** 长春花色 */
+  头发高亮: "#d8daeb",
+  /** 白色 */
+  皮肤: "#fff3ea",
+  /** 紫色 */
+  眼睛: "#4c519c",
+  /** 长春花色 */
+  眼睛亮部: "#8990e0",
+  /** 长春花色 */
+  眼睛高亮: "#aeb2ea",
+  /** 深紫色 */
+  眉毛: "#150525",
+
+  /** 红色 */
+  衣服: "#f94060",
+  /** 红色 */
+  衣服暗部: "#d31848",
+  /** 深灰色 */
+  裙子: "#3c3c3c",
+
+  /** 红色 */
+  蝴蝶结: "#f9404c",
+  /** 浅橙色 */
+  黄星头饰: "#ffcf6b",
+  /** 红色 */
+  红星头饰: "#ff3e62",
+};
 
 export const DianaColor = {
   /** 玫瑰色 */

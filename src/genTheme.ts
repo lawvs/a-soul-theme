@@ -1,5 +1,5 @@
-import { writeFile } from "fs/promises";
-import * as path from "path";
+import { writeFile } from "node:fs/promises";
+import * as path from "node:path";
 import { IColorSet } from "vscode-theme-generator";
 import { VscodeThemeGenerator } from "vscode-theme-generator/dist/vscodeThemeGenerator";
 import { OUTPUT_DIR } from "./config";

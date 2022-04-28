@@ -34,6 +34,9 @@ export const genAvaDark = async () => {
     overrides: {
       "statusBar.background": AvaColor.鞋子,
       "statusBar.debuggingBackground": AvaColor.领结,
+      "editorInlayHint.foreground": toHexColorString(
+        transparentize(0.4, AvaColor.皮肤)
+      ),
     },
   };
 

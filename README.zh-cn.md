@@ -6,41 +6,42 @@
 
 ![image](https://user-images.githubusercontent.com/18554747/165396514-cca8483e-fcd2-43d8-8c06-4e922ec4623c.png)
 
-Read this in [简体中文 (Simplified Chinese)](./README.zh-cn.md)
+使用 [English(英语)](./README.md) 阅读本文档
 
-## Install
 
-- Download `a-soul-theme.vsix` from the [Releases](https://github.com/lawvs/a-soul-theme/releases) page.
-- Copy `a-soul-theme.vsix` into the `<user home>/.vscode/extensions` folder and restart Code.
-- Or install it from `extension panel`.
+## 安装
+
+- 先从 [Releases](https://github.com/lawvs/a-soul-theme/releases) 页面下载 `a-soul-theme.vsix`。
+- 复制 `a-soul-theme.vsix` 到 `<user home>/.vscode/extensions` 文件夹下，然后重启 VSCode.
+- 你也可以直接在 `扩展面板` 安装下载好的 `a-soul-theme.vsix` 扩展.
   ![image](https://user-images.githubusercontent.com/18554747/165837108-f8a7da00-26d8-4c2a-b08e-86a61f42c5e3.png)
 
-## Development
+## 开发
 
 ```sh
-# Clone this repo
+# 克隆本仓库
 git clone git@github.com:lawvs/a-soul-theme.git
 
 cd ./a-soul-theme
 
-# Install dependencies
+# 安装依赖
 pnpm install
 
-# Development
+# 启用开发模式
 pnpm run dev
 
-# Build theme
+# 构建生成主题
 pnpm run build
 
-# Build vsix package
+# 构建 vsix 包
 pnpm run package
 ```
 
-- You can press `F5` to open a new window with the extension loaded.
-- Open `File > Preferences > Color Themes` and pick a color theme.
-- Open a file that has a language associated. The languages configured grammar will tokenize the text and assign 'scopes' to the tokens. To examine these scopes, invoke the `Developer: Inspect Editor Tokens and Scopes` command from the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
+- 可以直接按 `F5` 打开一个新的窗口预览主题.
+- 可以从菜单栏的 `File > Preferences > Color Themes` 挑选主题.
+- 使用命令面板(Windows `Ctrl+Shift+P`，Mac `Cmd+Shift+P`)的 `Developer: Inspect Editor Tokens and Scopes` 可以检查语言的语法和作用域.
 
-## References
+## 参考资料
 
 - [Visual Studio Code Themes](https://code.visualstudio.com/docs/getstarted/themes)
 - [Color Themes | Visual Studio Code](https://code.visualstudio.com/api/references/theme-color)
@@ -49,8 +50,8 @@ pnpm run package
 - [vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)
 - [Dracula](https://github.com/dracula/dracula-theme)
 
-## License
+## 授权
 
 [The MIT License](./LICENSE)
 
-NOTE: THE SOFTWARE ICON AND CHARACTERS IS NOT LICENSED BY MIT AND COPYRIGHT TO THE A-SOUL.
+注意：本软件的图标和设计参考的角色不包含在 MIT 许可中，A-SOUL 拥有版权。

@@ -28,19 +28,29 @@
   "contributes": {
     "themes": [
       {
-        "label": "Bella Dark",
-        "uiTheme": "vs-dark",
-        "path": "themes/bella-dark-color-theme.json"
-      },
-      {
         "label": "Ava Dark",
         "uiTheme": "vs-dark",
         "path": "themes/ava-dark-color-theme.json"
       },
       {
+        "label": "Bella Dark",
+        "uiTheme": "vs-dark",
+        "path": "themes/bella-dark-color-theme.json"
+      },
+      {
+        "label": "Carol Dark",
+        "uiTheme": "vs-dark",
+        "path": "themes/carol-dark-color-theme.json"
+      },
+      {
         "label": "Diana Dark",
         "uiTheme": "vs-dark",
         "path": "themes/diana-dark-color-theme.json"
+      },
+      {
+        "label": "Eileen Dark",
+        "uiTheme": "vs-dark",
+        "path": "themes/eileen-dark-color-theme.json"
       }
     ]
   },

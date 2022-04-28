@@ -22,6 +22,9 @@ export const genTheme = async ({
   const name = label.toLowerCase().split(" ").join("-");
   const file = path.relative(
     process.cwd(),
+    // Give your color definition file the `-color-theme.json` suffix
+    // and you will get hovers, code completion, color decorators,
+    // and color pickers when editing.
     path.join(OUTPUT_DIR, `${name}-color-theme.json`)
   );
   // generateTheme(theme.name, colorSet, path.join(OUTPUT_DIR, theme.file));

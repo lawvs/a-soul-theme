@@ -2,6 +2,13 @@ import * as path from "node:path";
 
 export const OUTPUT_DIR = path.join(process.cwd(), "themes");
 
+/**
+ * The background color is ported from [Dracula Theme](https://github.com/dracula/dracula-theme)
+ *
+ * Licensed under MIT.
+ */
+export const DarkBackground = "#282a36";
+
 export const AvaColor = {
   /** 天蓝色 */
   应援色: "#9ac8e2",
@@ -77,6 +84,42 @@ export const BellaColor = {
   /** 红色 */
   红星头饰: "#ff3e62",
 };
+
+export const CarolColor = {
+  /** 淡紫色 */
+  应援色: "#b8a6d9",
+
+  /** 紫色 */
+  头发: "#6e6586",
+  /** 淡紫色 */
+  头发亮部: "#e0d2ef",
+  /** 深紫色 */
+  头发暗部: "#443660",
+  /** 浅蓝色 */
+  头发挑染: "#c1b0fa",
+  /** 白色 */
+  皮肤: "#fffaf2",
+  /** 深蓝色 */
+  眼睛: "#120140",
+  /** 深紫色 */
+  眼睛亮部: "#4e3d7c",
+  /** 淡紫色 */
+  眼睛高亮: "#f8d4ff",
+  /** 深紫色 */
+  眉毛: "#4b1d49",
+
+  /** 靛蓝色 */
+  衣服: "#383a59",
+  /** 深紫色 */
+  衣服暗部: "#2b283d",
+  /** 靛蓝色 */
+  裙子: "#393842",
+
+  /** 淡紫色 */
+  领带: "#e3d1f3",
+  /** 靛蓝色 */
+  鞋子: "#363640",
+} as const;
 
 export const DianaColor = {
   /** 玫瑰色 */

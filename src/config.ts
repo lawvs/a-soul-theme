@@ -1,3 +1,7 @@
+import path from "node:path";
+
+export const OUTPUT_DIR = path.join(process.cwd(), "themes");
+
 export const AvaColor = {
   /** 天蓝色 */
   应援色: "#9ac8e2",

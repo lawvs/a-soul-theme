@@ -21,7 +21,7 @@
     "build": "ts-node ./src/index.ts",
     "clean": "rm -rf themes a-soul.vsix",
     "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
-    "package": "vsce package -o ./a-soul.vsix --no-dependencies",
+    "package": "vsce package -o ./a-soul-theme.vsix --no-dependencies",
     "start": "pnpm run build && pnpm run package",
     "typeCheck": "tsc ./src/*.ts --noEmit --strict"
   },

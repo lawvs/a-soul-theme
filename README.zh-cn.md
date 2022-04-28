@@ -15,6 +15,9 @@
 - 复制 `a-soul-theme.vsix` 到 `<user home>/.vscode/extensions` 文件夹下，然后重启 VSCode.
 - 你也可以直接在 `扩展面板` 安装下载好的 `a-soul-theme.vsix` 扩展.
   ![image](https://user-images.githubusercontent.com/18554747/165837108-f8a7da00-26d8-4c2a-b08e-86a61f42c5e3.png)
+- 安装完成后可以在扩展设置处更改主题。
+  ![image](https://user-images.githubusercontent.com/18554747/165841439-141b06cd-0f37-4701-8b58-b96e2b23bc16.png)
+
 
 ## 开发
 

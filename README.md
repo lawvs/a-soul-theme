@@ -14,6 +14,9 @@ Read this in [简体中文 (Simplified Chinese)](./README.zh-cn.md)
 - Copy `a-soul-theme.vsix` into the `<user home>/.vscode/extensions` folder and restart Code.
 - Or install it from `extension panel`.
   ![image](https://user-images.githubusercontent.com/18554747/165837108-f8a7da00-26d8-4c2a-b08e-86a61f42c5e3.png)
+- Change color theme.
+  ![image](https://user-images.githubusercontent.com/18554747/165841439-141b06cd-0f37-4701-8b58-b96e2b23bc16.png)
+
 
 ## Development
 

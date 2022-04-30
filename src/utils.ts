@@ -10,6 +10,9 @@ export const prepareDir = (dir: PathLike) => {
 
 /**
  * Format color string to hex color format
+ *
+ * See https://github.com/styled-components/polished/issues/614
+ *
  * @example
  * ```ts
  * toHexColorString('rgba(250,235,151,0.9)')

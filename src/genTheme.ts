@@ -4,6 +4,7 @@ import { IColorSet } from "vscode-theme-generator";
 import { VscodeThemeGenerator } from "vscode-theme-generator/dist/vscodeThemeGenerator";
 import { OUTPUT_DIR } from "./config";
 
+// See https://github.com/Tyriar/vscode-theme-generator/issues/63
 export const genTheme = async ({
   label,
   type,

@@ -43,6 +43,8 @@ pnpm run package
 - Open `File > Preferences > Color Themes` and pick a color theme.
 - Open a file that has a language associated. The languages configured grammar will tokenize the text and assign 'scopes' to the tokens. To examine these scopes, invoke the `Developer: Inspect Editor Tokens and Scopes` command from the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac).
 
+![inspect token](https://user-images.githubusercontent.com/18554747/166101716-538d8e05-f06c-4a05-8524-6c468d6a5359.png)
+
 ## References
 
 - [Visual Studio Code Themes](https://code.visualstudio.com/docs/getstarted/themes)

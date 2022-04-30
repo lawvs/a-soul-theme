@@ -31,7 +31,7 @@ export const genDianaDark = async () => {
     },
     ui: {
       cursor: DianaColor.应援色,
-      selection: toHexColorString(transparentize(0.8, DianaColor.应援色)),
+      selection: toHexColorString(transparentize(0.7, DianaColor.应援色)),
     },
     overrides: {
       "statusBar.background": DianaColor.鞋子,

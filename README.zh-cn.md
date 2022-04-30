@@ -8,7 +8,6 @@
 
 使用 [English(英语)](./README.md) 阅读本文档
 
-
 ## 安装
 
 - 先从 [Releases](https://github.com/lawvs/a-soul-theme/releases) 页面下载 `a-soul-theme.vsix`。
@@ -17,7 +16,6 @@
   ![image](https://user-images.githubusercontent.com/18554747/165837108-f8a7da00-26d8-4c2a-b08e-86a61f42c5e3.png)
 - 安装完成后可以在扩展设置处更改主题。
   ![image](https://user-images.githubusercontent.com/18554747/165841439-141b06cd-0f37-4701-8b58-b96e2b23bc16.png)
-
 
 ## 开发
 
@@ -57,4 +55,4 @@ pnpm run package
 
 [The MIT License](./LICENSE)
 
-注意：本软件的图标和设计参考的角色不包含在 MIT 许可中，A-SOUL 拥有版权。
+注意：本软件的图标和设计参考的角色不包含在 MIT 许可中，版权归 A-SOUL 所有。本软件已通过稀土掘金 2022 编程挑战赛大赛获得 A-SOUL Q 版表情包+模型素材[授权](https://forum.juejin.cn/hackathon/post/7080842485001355278)。
